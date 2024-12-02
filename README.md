@@ -1,4 +1,3 @@
-![image](https://github.com/user-attachments/assets/8b6c4ff8-c772-4f61-ab47-6b69ec433aeb)
 
 DB - 포스트그리 SQL
 

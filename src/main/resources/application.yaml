@@ -13,10 +13,10 @@ spring:
 
 r2dbc:
   hostname: ${R2DBC_HOSTNAME:localhost}
-  port: ${R2DBC_PORT:45432}
+  port: ${R2DBC_PORT:45430}
   username: ${R2DBC_USERNAME:dev-user}
   password: ${R2DBC_PASSWORD:password}
-  database: ${R2DBC_DATABASE:gallerworx_dev}
+  database: ${R2DBC_DATABASE:demo-dev}
   schema: ${R2DBC_SCHEME:public}
   timezone: ${R2DBC_TIMEZONE:UTC}
   auto-detect-extensions: ${R2DBC_AUTO_DETECT_EXTENSIONS:true}

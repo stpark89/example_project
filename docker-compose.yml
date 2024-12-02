@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:14
+    container_name: postgresql_db
+    environment:
+      - POSTGRES_USER=${R2DBC_USERNAME:-dev-user}
+      - POSTGRES_PASSWORD=${R2DBC_PASSWORD:-password}
+      - POSTGRES_DB=${R2DBC_DATABASE:-demo-dev}
+    ports:
+      - "${R2DBC_PORT:-45430}:5432"
+    volumes:
+      - postgresql_data:/var/lib/postgresql/data
+    networks:
+      - r2dbc-network
+
+volumes:
+  postgresql_data:
+    driver: local
+
+networks:
+  r2dbc-network:
+    driver: bridge
